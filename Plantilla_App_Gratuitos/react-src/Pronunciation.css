@@ -1,0 +1,11 @@
+.pronunciation-unit {
+  cursor: pointer;
+  transition: all 1s ease;
+  color: black;
+}
+
+.pronunciation-unit:hover {
+  background-color: var(--dark) !important;
+  color: whitesmoke;
+  transform: scale(1.05) !important;
+}

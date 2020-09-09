@@ -1,28 +1,46 @@
 {
-    "name": "espire",
-    "version": "1.0.0",
-    "devDependencies": {
-        "grunt": "^1.0.1",
-        "grunt-chmod": "^1.1.1",
-        "grunt-concurrent": "^1.0.0",
-        "grunt-contrib-clean": "^1.0.0",
-        "grunt-contrib-concat": "^1.0.1",
-        "grunt-contrib-connect": "^0.8.0",
-        "grunt-contrib-copy": "^1.0.0",
-        "grunt-contrib-cssmin": "^1.0.0",
-        "grunt-contrib-htmlmin": "^0.3.0",
-        "grunt-contrib-sass": "^1.0.0",
-        "grunt-contrib-uglify": "^2.2.0",
-        "grunt-contrib-watch": "^1.0.0",
-        "grunt-filerev": "^2.0.0",
-        "grunt-sass": "^2.0.0",
-        "grunt-usemin": "^2.4.0",
-        "grunt-wiredep": "^2.0.0",
-        "jshint-stylish": "^1.0.0",
-        "load-grunt-tasks": "^3.5.2",
-        "time-grunt": "^1.2.1"
-    },
-    "dependencies": {
-        "node-sass": "^4.9.0"
-    }
+  "name": "espire",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "grunt": "^1.0.1",
+    "grunt-chmod": "^1.1.1",
+    "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.0",
+    "grunt-contrib-htmlmin": "^0.3.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-filerev": "^2.0.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-usemin": "^2.4.0",
+    "grunt-wiredep": "^2.0.0",
+    "jshint-stylish": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "style-loader": "^1.2.1",
+    "time-grunt": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "node-sass": "^4.9.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
