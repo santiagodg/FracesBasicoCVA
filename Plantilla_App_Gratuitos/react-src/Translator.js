@@ -28,25 +28,25 @@ const TranslatorRow = ({
   return (
     <>
       <hr className="m-0" />
-      <div className="row no-gutters my-2">
-        <div className="col p-2">
-          <div className="d-flex">
+      <div className="row no-gutters mrg-vertical-10">
+        <div className="col no-pdd">
+          <div className="d-flex h-100">
             <button
-              className="mr-auto btn btn-secondary"
+              className="mr-auto btn btn-secondary mb-0"
               onClick={handlePlayAudio}
             >
               <i className="fas fa-volume-up" />
             </button>
-            <p className="mr-auto my-auto">{phrase}</p>
+            <p className="mr-auto my-auto text-center">{phrase}</p>
           </div>
         </div>
-        <div className="col p-2">
-          <div className="d-flex">
+        <div className="col no-pdd">
+          <div className="d-flex h-100">
             {isTranslated ? (
               <>
-                <p className="ml-auto my-auto">{translation}</p>
+                <p className="ml-auto my-auto text-center">{translation}</p>
                 <button
-                  className="ml-auto btn btn-secondary"
+                  className="ml-auto btn btn-secondary mb-0"
                   onClick={handleSwitchTranslation}
                 >
                   <i className="fas fa-eye-slash" />
@@ -54,7 +54,7 @@ const TranslatorRow = ({
               </>
             ) : (
               <button
-                className="mx-auto btn btn-secondary"
+                className="mx-auto btn btn-secondary mb-0"
                 onClick={handleSwitchTranslation}
               >
                 <i className="fas fa-eye" />
@@ -112,16 +112,16 @@ const Translator = ({ data }) => {
   ));
 
   return (
-    <div className="translator m-5 card p-3 shadow">
+    <div className="margin-20 padding-20">
       <div className="d-flex justify-content-end">
         <button
-          className="btn btn-primary m-2"
+          className="btn btn-primary mrg-horizon-10"
           onClick={onClickShowAllTranslations}
         >
           Mostrar
         </button>
         <button
-          className="btn btn-primary m-2"
+          className="btn btn-primary mrg-horizon-10"
           onClick={onClickHideAllTranslations}
         >
           Esconder

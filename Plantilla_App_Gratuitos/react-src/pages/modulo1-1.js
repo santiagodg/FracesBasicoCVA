@@ -5,67 +5,69 @@ import Translator from "../Translator";
 import Dialog from "../Dialog";
 import Pronunciation from "../Pronunciation";
 
-const translationData = [
+const assetsPath = "../../assets/";
+
+const pronunciationData = [
   {
     phrase: "Salut",
     translation: "Hola",
-    audio: "/assets/audio/Salut.m4a",
+    audio: `${assetsPath}audio/Salut.m4a`,
   },
   {
     phrase: "Au Revoir",
     translation: "Adios",
-    audio: "/assets/audio/Au Revoir.m4a",
+    audio: `${assetsPath}audio/Au Revoir.m4a`,
   },
   {
     phrase: "A plus tard",
     translation: "Nos vemos / Hasta luego",
-    audio: "/assets/audio/A plus tard.m4a",
+    audio: `${assetsPath}audio/A plus tard.m4a`,
   },
   {
     phrase: "A bientôt",
     translation: "Hasta pronto",
-    audio: "/assets/audio/A bientôt.m4a",
+    audio: `${assetsPath}audio/A bientôt.m4a`,
   },
   {
     phrase: "A demain",
     translation: "Hasta mañana",
-    audio: "/assets/audio/A demain.m4a",
+    audio: `${assetsPath}audio/A demain.m4a`,
   },
   {
     phrase: "Bienvenue",
     translation: "Bienvenido",
-    audio: "/assets/audio/Bienvenue.m4a",
+    audio: `${assetsPath}audio/Bienvenue.m4a`,
   },
   {
     phrase: "Bonjour",
     translation: "Buenos días",
-    audio: "/assets/audio/Bonjour.m4a",
+    audio: `${assetsPath}audio/Bonjour.m4a`,
   },
   {
     phrase: "Bon aprés-midi",
     translation: "Buenas tardes",
-    audio: "/assets/audio/Bon aprés-midi.m4a",
+    audio: `${assetsPath}audio/Bon aprés-midi.m4a`,
   },
   {
     phrase: "Bonsoir",
     translation: "Buenas noches",
-    audio: "/assets/audio/Bonsoir.m4a",
+    audio: `${assetsPath}audio/Bonsoir.m4a`,
   },
   {
     phrase: "Bonne soirée",
     translation: "Buenas tardes/noches",
-    audio: "/assets/audio/Bonne soirée.m4a",
+    audio: `${assetsPath}audio/Bonne soirée.m4a`,
   },
   {
     phrase: "Bonne nuit",
     translation: "Buenas noches (únicamente cuando ya te vas a dormir)",
-    audio: "/assets/audio/Bonne nuit.m4a",
+    audio: `${assetsPath}audio/Bonne nuit.m4a`,
   },
 ];
 
 const dialogData = {
   title: "Diálogo 1",
-  audio: "/assets/audio/Diálogo1.m4a",
+  audio: `${assetsPath}audio/Diálogo1.m4a`,
   lines: [
     {
       character: "Caroline",
@@ -98,61 +100,66 @@ const dialogData = {
   ],
 };
 
-const pronunciationData = [
+const translationData = [
   {
-    phrase: "Salut",
-    translation: "Hola",
-    audio: "/assets/audio/Salut.m4a",
+    phrase: "Comment ça va?",
+    translation: "¿Cómo estás?",
+    audio: `${assetsPath}audio/Comment ça va_.m4a`,
   },
   {
-    phrase: "Au Revoir",
-    translation: "Adios",
-    audio: "/assets/audio/Au Revoir.m4a",
+    phrase: "Comment allez-vous?",
+    translation: "¿Cómo está?",
+    audio: `${assetsPath}audio/Comment allez-vous_.m4a`,
   },
   {
-    phrase: "A plus tard",
-    translation: "Nos vemos / Hasta luego",
-    audio: "/assets/audio/A plus tard.m4a",
+    phrase: "Qu’est-ce que tu racontes?",
+    translation: "¿Qué tal? / ¿Qué onda?",
+    audio: `${assetsPath}audio/Qu’est-ce que tu racontes_.m4a`,
   },
   {
-    phrase: "A bientôt",
-    translation: "Hasta pronto",
-    audio: "/assets/audio/A bientôt.m4a",
+    phrase: "Tout va bien?",
+    translation: "¿Todo va bien?",
+    audio: `${assetsPath}audio/Tout va bien_.m4a`,
   },
   {
-    phrase: "A demain",
-    translation: "Hasta mañana",
-    audio: "/assets/audio/A demain.m4a",
+    phrase: "Prends soin de toi",
+    translation: "Cuidate",
+    audio: `${assetsPath}audio/Prends soin de toi.m4a`,
   },
   {
-    phrase: "Bienvenue",
-    translation: "Bienvenido",
-    audio: "/assets/audio/Bienvenue.m4a",
+    phrase: "Bonne chance",
+    translation: "Buena suerte",
+    audio: `${assetsPath}audio/Bonne chance.m4a`,
   },
   {
-    phrase: "Bonjour",
-    translation: "Buenos días",
-    audio: "/assets/audio/Bonjour.m4a",
+    phrase: "Je vais bien",
+    translation: "Estoy bien",
+    audio: `${assetsPath}audio/Je vais bien.m4a`,
   },
   {
-    phrase: "Bon aprés-midi",
-    translation: "Buenas tardes",
-    audio: "/assets/audio/Bon aprés-midi.m4a",
+    phrase: "Bien",
+    translation: "Bien",
+    audio: `${assetsPath}audio/Bien.m4a`,
   },
   {
-    phrase: "Bonsoir",
-    translation: "Buenas noches",
-    audio: "/assets/audio/Bonsoir.m4a",
+    phrase: "Mal",
+    translation: "Mal",
+    audio: `${assetsPath}audio/Mal.m4a`,
   },
   {
-    phrase: "Bonne soirée",
-    translation: "Buenas tardes/noches",
-    audio: "/assets/audio/Bonne soirée.m4a",
+    phrase: "Très bien",
+    translation: "Très bien",
+    audio: `${assetsPath}audio/Très bien.m4a`,
   },
   {
-    phrase: "Bonne nuit",
-    translation: "Buenas noches (únicamente cuando ya te vas a dormir)",
-    audio: "/assets/audio/Bonne nuit.m4a",
+    phrase: "Et toi?",
+    translation: "¿Y tú?",
+    audio: `${assetsPath}audio/Et toi_.m4a`,
+  },
+  {
+    phrase: "Et vous?",
+    translation: "¿Y usted?",
+    audio: `${assetsPath}audio/Et vous_.m4a`,
   },
 ];
 

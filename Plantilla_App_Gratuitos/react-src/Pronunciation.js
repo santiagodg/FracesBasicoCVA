@@ -15,8 +15,8 @@ const PronunciationUnit = ({ phrase, translation, audio }) => {
   }
 
   return (
-    <div className="col-4">
-      <div className="card bg-light p-3 m-3 text-center pronunciation-unit" onClick={handlePlayAudio}>
+    <div className="col-4 padding-10">
+      <div className="card bg-light padding-20 h-100 text-center pronunciation-unit" onClick={handlePlayAudio}>
         <div>
           <i className="fas fa-volume-up display-4 text-body" />
         </div>
@@ -46,7 +46,7 @@ const Pronunciation = ({ data }) => {
   ));
 
   return (
-    <div className="card m-5 p-3 bg-white shadow">
+    <div className="margin-20 padding-20 bg-white">
       <div className="row no-gutters">
         {pronUnits}
       </div>

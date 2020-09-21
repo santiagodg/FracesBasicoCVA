@@ -27,7 +27,7 @@ const Dialog = (props) => {
   ));
 
   return (
-    <div className="card m-5 bg-white shadow p-3">
+    <div className="margin-20 bg-white padding-20">
       <div className="d-flex">
         <button className="btn btn-primary mr-3 px-4" onClick={handlePlayAudio}>
           <i className="fas fa-volume-up" />
