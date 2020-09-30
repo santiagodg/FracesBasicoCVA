@@ -23,6 +23,7 @@ const TranslatorRow = ({
   const handlePlayAudio = (event) => {
     event.preventDefault();
     audioObj.play();
+    handleTranslate(phrase);
   };
 
   return (
@@ -77,7 +78,7 @@ const Translator = ({ data }) => {
   // ];
 
   const [isTranslated, setIsTranslated] = React.useState(
-    Array.apply(null, Array(data.length)).map(() => true)
+    Array.apply(null, Array(data.length)).map(() => false)
   );
 
   const onClickHideAllTranslations = () => {
