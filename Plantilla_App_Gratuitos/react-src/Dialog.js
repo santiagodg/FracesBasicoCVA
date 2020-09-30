@@ -11,12 +11,24 @@ const Dialog = (props) => {
   //     },
   //   ],
   // }
-  const {title, audio, lines} = props.data;
+  const { title, audio, lines } = props.data;
+  const [isPlaying, setIsPlaying] = React.useState(false);
+  const audioRef = React.useRef(null);
 
-  const audioObj = new Audio(audio);
+  // let audioObj = new Audio(audio);
   const handlePlayAudio = (event) => {
-    event.preventDefault();
-    audioObj.play();
+    audioRef.current.play().then(() => {
+      setIsPlaying(true);
+    });
+  };
+
+  const handlePauseAudio = (event) => {
+    audioRef.current.pause();
+    setIsPlaying(false);
+  };
+
+  const handleEndedAudio = (event) => {
+    setIsPlaying(false);
   }
 
   const dialogLines = lines.map((line, index) => (
@@ -26,12 +38,24 @@ const Dialog = (props) => {
     </p>
   ));
 
+  const playPauseButton = isPlaying ? (
+    <button
+      className="btn btn-actual-page mr-3 px-4"
+      onClick={handlePauseAudio}
+    >
+      <i className="fas fa-pause" />
+    </button>
+  ) : (
+    <button className="btn btn-actual-page mr-3 px-4" onClick={handlePlayAudio}>
+      <i className="fas fa-volume-up" />
+    </button>
+  );
+
   return (
     <div className="margin-20 bg-white padding-20">
       <div className="d-flex">
-        <button className="btn btn-actual-page mr-3 px-4" onClick={handlePlayAudio}>
-          <i className="fas fa-volume-up" />
-        </button>
+        {playPauseButton}
+        <audio ref={audioRef} src={audio} onEnded={handleEndedAudio} />
         <h1 className="mr-auto">{title}</h1>
       </div>
       <hr />
