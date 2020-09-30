@@ -4,6 +4,7 @@ module.exports = {
   mode: "development",
   entry: {
     "modulo1-1": "./react-src/pages/modulo1-1.js",
+    "modulo1-2": "./react-src/pages/modulo1-2.js",
   },
   devtool: "inline-source-map",
   devServer: {
