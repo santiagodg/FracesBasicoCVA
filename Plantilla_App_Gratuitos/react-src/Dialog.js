@@ -20,7 +20,7 @@ const Dialog = (props) => {
   }
 
   const dialogLines = lines.map((line, index) => (
-    <p key={index}>
+    <p key={index} className="mrg-btm-10 lh-1">
       <span className="font-weight-bold">{`${line.character}: `}</span>
       {line.text}
     </p>
@@ -29,7 +29,7 @@ const Dialog = (props) => {
   return (
     <div className="margin-20 bg-white padding-20">
       <div className="d-flex">
-        <button className="btn btn-primary mr-3 px-4" onClick={handlePlayAudio}>
+        <button className="btn btn-actual-page mr-3 px-4" onClick={handlePlayAudio}>
           <i className="fas fa-volume-up" />
         </button>
         <h1 className="mr-auto">{title}</h1>

@@ -5,7 +5,7 @@
 }
 
 .pronunciation-unit:hover {
-  background-color: var(--dark) !important;
+  background-color: var(--theme-color) !important;
   color: whitesmoke;
   transform: scale(1.05) !important;
 }

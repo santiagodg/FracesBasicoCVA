@@ -15,12 +15,12 @@ const PronunciationUnit = ({ phrase, translation, audio }) => {
   }
 
   return (
-    <div className="col-4 padding-10">
+    <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 padding-10">
       <div className="card bg-light padding-20 h-100 text-center pronunciation-unit" onClick={handlePlayAudio}>
         <div>
           <i className="fas fa-volume-up display-4 text-body" />
         </div>
-        <div className="h1">{phrase}</div>
+        <div className="h3">{phrase}</div>
         <div>{translation}</div>
       </div>
     </div>

@@ -29,7 +29,7 @@ const TranslatorRow = ({
     <>
       <hr className="m-0" />
       <div className="row no-gutters mrg-vertical-10">
-        <div className="col no-pdd">
+        <div className="col-md-6 no-pdd">
           <div className="d-flex h-100">
             <button
               className="mr-auto btn btn-secondary mb-0"
@@ -40,7 +40,7 @@ const TranslatorRow = ({
             <p className="mr-auto my-auto text-center">{phrase}</p>
           </div>
         </div>
-        <div className="col no-pdd">
+        <div className="col-md-6 no-pdd">
           <div className="d-flex h-100">
             {isTranslated ? (
               <>
@@ -112,16 +112,16 @@ const Translator = ({ data }) => {
   ));
 
   return (
-    <div className="margin-20 padding-20">
+    <div className="margin-20 mrg-horizon-150 padding-20">
       <div className="d-flex justify-content-end">
         <button
-          className="btn btn-primary mrg-horizon-10"
+          className="btn btn-actual-page mrg-horizon-10"
           onClick={onClickShowAllTranslations}
         >
           Mostrar
         </button>
         <button
-          className="btn btn-primary mrg-horizon-10"
+          className="btn btn-actual-page mrg-horizon-10"
           onClick={onClickHideAllTranslations}
         >
           Esconder
