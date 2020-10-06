@@ -1,0 +1,7 @@
+.listen-item-og {
+  transition: text-decoration 1s ease;
+}
+
+.listen-item-og:hover {
+  text-decoration: underline;
+}
