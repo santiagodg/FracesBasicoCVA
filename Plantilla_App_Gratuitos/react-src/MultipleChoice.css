@@ -1,0 +1,19 @@
+.multiple-choice-label {
+  font-size: 18px;
+  color: #000;
+}
+
+.multiple-choice-label-checked-correct {
+  color: green !important;
+  font-weight: bold;
+}
+
+.multiple-choice-label-unchecked-correct {
+  color: green !important;
+  font-weight: bold;
+}
+
+.multiple-choice-label-checked-incorrect {
+  color: red !important;
+  font-weight: bold;
+}

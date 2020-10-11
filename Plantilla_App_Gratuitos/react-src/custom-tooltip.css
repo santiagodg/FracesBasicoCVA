@@ -1,0 +1,8 @@
+.custom-tooltip {
+  font-size: 18px !important;
+  max-width: none !important;
+}
+
+.underline-on-hover:hover {
+  text-decoration: underline;
+}
