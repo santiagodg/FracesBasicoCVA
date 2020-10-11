@@ -1,0 +1,11 @@
+.fill-blank-item-correct {
+  background-color: #e6ffe6;
+}
+
+.fill-blank-item-incorrect {
+  background-color: #f9c1b8;
+}
+
+.fill-blank-item-tooltip-on-hover:hover {
+  text-decoration: underline;
+}

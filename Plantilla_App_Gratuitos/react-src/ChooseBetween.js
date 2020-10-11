@@ -15,11 +15,11 @@ const ChooseBetweenItem = ({
       const classes = {};
       classes.selected = graded
         ? opt.correct
-          ? "choose-blank-selected-correct"
-          : "choose-blank-selected-incorrect"
+          ? "choose-between-selected-correct"
+          : "choose-between-selected-incorrect"
         : undefined;
       classes.root =
-        graded && opt.correct ? "choose-blank-root-correct" : undefined;
+        graded && opt.correct ? "choose-between-root-correct" : undefined;
       return (
         <ToggleButton key={opt.answer} value={index} classes={classes}>
           <span>{opt.answer}</span>

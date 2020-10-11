@@ -1,0 +1,15 @@
+.choose-between-root-correct {
+  background-color: #e6ffe6 !important;
+}
+
+.choose-between-selected-correct {
+  background-color: #80ff80 !important;
+  border-color: green !important;
+  border-width: 2px !important;
+}
+
+.choose-between-selected-incorrect {
+  background-color: #ff4d4d !important;
+  border-color: red !important;
+  border-width: 2px !important;
+}
