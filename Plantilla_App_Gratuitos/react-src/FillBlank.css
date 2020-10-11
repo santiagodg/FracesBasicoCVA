@@ -9,3 +9,7 @@
 .fill-blank-item-tooltip-on-hover:hover {
   text-decoration: underline;
 }
+
+.fill-blank-black-text {
+  color: #000;
+}

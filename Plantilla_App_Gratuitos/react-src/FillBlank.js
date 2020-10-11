@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Tooltip from "@material-ui/core/Tooltip";
 import "./FillBlank.css";
+import "./custom-tooltip.css";
 
 const FillBlankItem = ({
   data,
@@ -10,7 +11,7 @@ const FillBlankItem = ({
   handleInputChange,
 }) => {
   let inputsCreated = 0;
-  const exercise = data.map((item, index) => {
+  let exercise = data.map((item, index) => {
     let res;
     if (item.blank) {
       let className = "";
@@ -21,26 +22,54 @@ const FillBlankItem = ({
           className += "fill-blank-item-incorrect ";
         }
       }
-      res = (
-        <Fragment key={index}>
-          &nbsp;
-          <input
-            type="text"
-            className={`form-control d-inline-block ${className}`}
-            style={{ width: "300px" }}
-            value={inputValue[inputsCreated]}
-            onChange={handleInputChange[inputsCreated]}
-          ></input>
-          &nbsp;
-        </Fragment>
-      );
+
+      if (!isGraded) {
+        res = (
+          <Fragment key={index}>
+            &nbsp;
+            <input
+              type="text"
+              className={`fill-blank-black-text form-control d-inline-block ${className}`}
+              style={{ width: "300px" }}
+              value={inputValue[inputsCreated]}
+              onChange={handleInputChange[inputsCreated]}
+            ></input>
+            &nbsp;
+          </Fragment>
+        );
+      } else {
+        res = (
+          <Fragment key={index}>
+            &nbsp;
+            <Tooltip
+              title={item.original}
+              placement="top"
+              classes={{ tooltip: "custom-tooltip" }}
+            >
+              <input
+                type="text"
+                className={`fill-blank-black-text form-control d-inline-block ${className}`}
+                style={{ width: "300px" }}
+                value={inputValue[inputsCreated]}
+                onChange={handleInputChange[inputsCreated]}
+              ></input>
+            </Tooltip>
+            &nbsp;
+          </Fragment>
+        );
+      }
       inputsCreated++;
     } else {
       res = !isGraded ? (
-        <span key={index}>{item.original}&nbsp;</span>
+        <span key={index} className="fill-blank-black-text">{item.original}&nbsp;</span>
       ) : (
-        <Tooltip key={index} title={item.translation} placement="top">
-          <span className="fill-blank-item-tooltip-on-hover">
+        <Tooltip
+          key={index}
+          title={item.translation}
+          placement="top"
+          classes={{ tooltip: "custom-tooltip" }}
+        >
+          <span className="fill-blank-black-text fill-blank-item-tooltip-on-hover">
             {item.original}&nbsp;
           </span>
         </Tooltip>
