@@ -11,9 +11,10 @@ const ReadingAndMultipleChoiceQuiz = ({ readingData, multipleChoiceData }) => {
 
   const handleGrade = () => {
     setGraded(true);
-  };
+  }
 
   const handleClear = () => {
+    setChecked(multipleChoiceData.map((_) => null));
     setGraded(false);
   }
 

@@ -16,10 +16,21 @@ const MultipleChoiceQuestion = ({
     <div className="mb-3">
       <p className="mb-0">
         {!graded ? (
-          <span>{question.original}</span>
+          <span dangerouslySetInnerHTML={{ __html: question.original }} />
         ) : (
-          <Tooltip title={question.translation} placement="top" classes={{tooltip: "font-size-18"}}>
-            <span className="underline-on-hover">{question.original}</span>
+          <Tooltip
+            title={
+              <span
+                dangerouslySetInnerHTML={{ __html: question.translation }}
+              />
+            }
+            placement="top"
+            classes={{ tooltip: "font-size-18" }}
+          >
+            <span
+              className="underline-on-hover"
+              dangerouslySetInnerHTML={{ __html: question.original }}
+            />
           </Tooltip>
         )}
       </p>
@@ -51,7 +62,11 @@ const MultipleChoiceQuestion = ({
                 className="form-check-input"
               />
               &nbsp;&nbsp;
-              <Tooltip title={opt.translation} placement="top" classes={{tooltip: "font-size-18"}}>
+              <Tooltip
+                title={opt.translation}
+                placement="top"
+                classes={{ tooltip: "font-size-18" }}
+              >
                 <label
                   className={
                     "form-check-label " +
@@ -78,18 +93,64 @@ const MultipleChoiceQuestion = ({
 };
 
 const MultipleChoice = ({ data, graded, checked, onChange }) => {
-  const questions = data.map((q, index) => (
-    <MultipleChoiceQuestion
-      key={index}
-      question={q.question}
-      options={q.options}
-      correctValue={q.correct}
-      checked={checked[index]}
-      onChange={onChange[index]}
-      graded={graded}
-    />
-  ));
-  return <>{questions}</>;
+  let setGraded,
+    setChecked,
+    handleGrade,
+    handleClear,
+    gradedWasUndefined = false;
+
+  if (graded === undefined) {
+    gradedWasUndefined = true;
+    [graded, setGraded] = React.useState(false);
+    handleGrade = () => {
+      setGraded(true);
+    };
+    handleClear = () => {
+      setChecked(data.map((_) => null));
+      setGraded(false);
+    };
+  }
+
+  if (checked === undefined) {
+    [checked, setChecked] = React.useState(data.map((_) => null));
+  }
+
+  if (onChange === undefined) {
+    onChange = data.map((_, index) => (event) => {
+      let newChecked = [...checked];
+      newChecked[index] = event.target.value;
+      setChecked(newChecked);
+    });
+  }
+
+  return (
+    <>
+      {data.map((q, index) => (
+        <MultipleChoiceQuestion
+          key={index}
+          question={q.question}
+          options={q.options}
+          correctValue={q.correct}
+          checked={checked[index]}
+          onChange={onChange[index]}
+          graded={graded}
+        />
+      ))}
+      {gradedWasUndefined ? (
+        graded ? (
+          <button class="btn btn-actual-page" onClick={handleClear}>
+            Reintentar
+          </button>
+        ) : (
+          <button class="btn btn-actual-page" onClick={handleGrade}>
+            Revisar
+          </button>
+        )
+      ) : (
+        <></>
+      )}
+    </>
+  );
 };
 
 export default MultipleChoice;
