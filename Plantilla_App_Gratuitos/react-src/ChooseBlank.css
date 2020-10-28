@@ -1,15 +1,15 @@
 .choose-blank-root-correct {
-  background-color: #e6ffe6 !important;
+  background-color: #C6EFCE !important;
 }
 
 .choose-blank-selected-correct {
-  background-color: #80ff80 !important;
-  border-color: green !important;
+  background-color: #C6EFCE !important;
+  border-color: #006100 !important;
   border-width: 2px !important;
 }
 
 .choose-blank-selected-incorrect {
-  background-color: #ff4d4d !important;
-  border-color: red !important;
+  background-color: #FFC7CE !important;
+  border-color: #9C0006 !important;
   border-width: 2px !important;
 }

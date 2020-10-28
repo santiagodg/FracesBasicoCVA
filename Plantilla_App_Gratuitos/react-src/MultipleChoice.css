@@ -4,16 +4,16 @@
 }
 
 .multiple-choice-label-checked-correct {
-  color: green !important;
+  color: #006100 !important;
   font-weight: bold;
 }
 
 .multiple-choice-label-unchecked-correct {
-  color: green !important;
+  color: #006100 !important;
   font-weight: bold;
 }
 
 .multiple-choice-label-checked-incorrect {
-  color: red !important;
+  color: #9C0006 !important;
   font-weight: bold;
 }

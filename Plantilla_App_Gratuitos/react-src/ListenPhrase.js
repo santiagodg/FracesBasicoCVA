@@ -1,12 +1,13 @@
 import React from "react";
 import Tooltip from "@material-ui/core/Tooltip";
-import './ListenPhrase.css'
+import './ListenPhrase.css';
+import "./custom-tooltip.css";
 
 const ListenItem = ({ sentences, audio, listNumber }) => {
   const phrases = sentences.map((item) => (
     <>
-      <Tooltip title={item.translation} placement="top">
-        <span className="listen-item-og">{item.original}</span>
+      <Tooltip title={item.translation} placement="top" classes={{ tooltip: "custom-tooltip" }}>
+        <span className="underline-on-hover">{item.original}</span>
       </Tooltip>
       &nbsp;
     </>

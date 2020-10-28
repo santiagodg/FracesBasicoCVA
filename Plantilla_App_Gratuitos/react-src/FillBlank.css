@@ -1,13 +1,14 @@
 .fill-blank-item-correct {
-  background-color: #e6ffe6;
+  background-color: #C6EFCE;
 }
 
 .fill-blank-item-incorrect {
-  background-color: #f9c1b8;
+  background-color: #FFC7CE;
 }
 
 .fill-blank-item-tooltip-on-hover:hover {
   text-decoration: underline;
+  color: #00e;
 }
 
 .fill-blank-black-text {

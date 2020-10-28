@@ -7,7 +7,7 @@ const Reading = ({ data, graded }) => {
     <div className="reading px-5">
       {data.map((paragraph, i) => {
         return (
-          <p key={i}>
+          <p key={i} className="text-justify">
             {paragraph.map((sentence, j) => {
               if (!graded) {
                 return (

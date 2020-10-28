@@ -47,7 +47,7 @@ const Pronunciation = ({ data }) => {
 
   return (
     <div className="margin-20 padding-20 bg-white">
-      <div className="row no-gutters">
+      <div className="row no-gutters justify-content-center">
         {pronUnits}
       </div>
     </div>
