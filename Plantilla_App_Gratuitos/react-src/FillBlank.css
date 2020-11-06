@@ -13,4 +13,9 @@
 
 .fill-blank-black-text {
   color: #000;
+  
+}
+
+.fill-blank-black-text.form-control {
+  border: 1px solid #bbb;
 }

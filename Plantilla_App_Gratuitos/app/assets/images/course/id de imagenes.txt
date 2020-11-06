@@ -1,0 +1,17 @@
+/assets/images/course/intro/portada.jpg             - Shutterstock ID 1397037440
+/assets/images/course/intro/objetivos.jpg           - Shutterstock ID 1048826999
+/assets/images/course/intro/metodologia.jpg         - Shutterstock ID 782270425
+/assets/images/course/congratulations.jpg           - Shutterstock ID 629144165
+/assets/images/course/temario/modulo1.jpg           - Shutterstock ID 454026802
+/assets/images/course/temario/modulo2.jpg           - Shutterstock ID 370390046
+/assets/images/course/temario/modulo3.jpg           - Shutterstock ID 1254279517
+/assets/images/course/temario/modulo4.jpg           - Shutterstock ID 766847608
+/assets/images/course/temario/modulo5.jpg           - Shutterstock ID 1378191401
+/assets/images/course/temario/modulo6.jpg           - Shutterstock ID 749310046
+/assets/images/course/temario/modulo7.jpg           - Shutterstock ID 1393758206
+/assets/images/course/temario/modulo8.jpg           - Shutterstock ID 524728789
+/assets/images/course/modulo1/portada.jpg           - Shutterstock ID 1150484738
+/assets/images/course/modulo1/conocer-a-alguien.jpg - Shutterstock ID 1011457795
+/assets/images/course/modulo2/portada.jpg           - Shutterstock ID 379530769
+/assets/images/course/modulo3/portada.jpg           - Shutterstock ID 752113054
+/assets/images/course/modulo4/portada.jpg           - Shutterstock ID 515462563
