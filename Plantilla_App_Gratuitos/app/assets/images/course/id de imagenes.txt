@@ -15,3 +15,4 @@
 /assets/images/course/modulo2/portada.jpg           - Shutterstock ID 379530769
 /assets/images/course/modulo3/portada.jpg           - Shutterstock ID 752113054
 /assets/images/course/modulo4/portada.jpg           - Shutterstock ID 515462563
+/assets/images/course/modulo5/portada.jpg           - Shutterstock ID 548213818
