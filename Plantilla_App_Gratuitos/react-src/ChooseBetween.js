@@ -41,6 +41,20 @@ const ChooseBetweenItem = ({
   }
 
   const exercise = () => {
+    if (textParts.length === 0) {
+      const [selected, _] = selectedState[0];
+      return (
+      <ToggleButtonGroup
+          key={0}
+          exclusive
+          value={selected}
+          onChange={toggleButtonChangeHandlers[0]}
+          className="px-2"
+        >
+          {toggleButtons[0]}
+        </ToggleButtonGroup>
+      );
+    }
     let res = [];
     res.push(<span key={textParts[0]} className="font-size-18">{textParts[0]}</span>);
     for (let i = 1; i < textParts.length; i++) {
@@ -136,7 +150,7 @@ const ChooseBetween = ({ data }) => {
   ));
 
   return (
-    <div className="choose-between">
+    <div className="choose-between" style={{color: "black"}}>
       {chooseBetweenItems}
       {!graded ? (
         <button className="btn btn-actual-page" onClick={handleClickGrade}>

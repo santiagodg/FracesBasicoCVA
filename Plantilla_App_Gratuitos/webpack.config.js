@@ -20,6 +20,7 @@ module.exports = {
     "modulo4-3": "./react-src/pages/modulo4-3.js",
     "modulo4-4": "./react-src/pages/modulo4-4.js",
     "modulo5-1": "./react-src/pages/modulo5-1.js",
+    "modulo5-2": "./react-src/pages/modulo5-2.js",
   },
   devtool: "inline-source-map",
   devServer: {

@@ -2,25 +2,33 @@ import React from "react";
 import Tooltip from "@material-ui/core/Tooltip";
 import "./custom-tooltip.css";
 
+// const data = [
+//   [
+//     {
+//       original: "Je m'appelle Daniela.",
+//       translation: "Me llamo Daniela.",
+//     },
+//   ],
+// ];
+
 const Reading = ({ data, graded }) => {
   return (
-    <div className="reading px-5">
+    <div className="reading px-md-5">
       {data.map((paragraph, i) => {
         return (
           <p key={i} className="text-justify">
             {paragraph.map((sentence, j) => {
               if (!graded) {
                 return (
-                  <span>
-                    <span key={j} className="font-italic">{sentence.original}</span>
+                  <span key={j}>
+                    <span className="font-italic">{sentence.original}</span>
                     &nbsp;
                   </span>
                 );
               } else {
                 return (
-                  <span>
+                  <span key={j}>
                     <Tooltip
-                      key={j}
                       title={sentence.translation}
                       placement="top"
                       classes={{ tooltip: "custom-tooltip" }}
