@@ -61,7 +61,9 @@ const FillBlankItem = ({
       inputsCreated++;
     } else {
       res = !isGraded ? (
-        <span key={index} className="fill-blank-black-text">{item.original}&nbsp;</span>
+        <span key={index} className="fill-blank-black-text">
+          {item.original}&nbsp;
+        </span>
       ) : (
         <Tooltip
           key={index}
@@ -109,49 +111,74 @@ const FillBlankItem = ({
 //     },
 //   ],
 // ]
-const FillBlank = ({ data }) => {
-  const [inputValue, setInputValue] = React.useState(
-    data.map((item) => item.filter((elem) => elem.blank).map((elem) => ""))
-  );
-  const [isGraded, setIsGraded] = React.useState(false);
-  const [isCorrect, setIsCorrect] = React.useState(
-    data.map((item) => item.filter((elem) => elem.blank).map((elem) => false))
-  );
+const FillBlank = ({
+  data,
+  inputValue,
+  handleInputChange,
+  isCorrect,
+  isGraded,
+}) => {
+  let setInputValue,
+    setIsGraded,
+    setIsCorrect,
+    handleGrade,
+    handleClear,
+    gradedWasUndefined = false;
 
-  const handleInputChange = data.map((item, i) =>
-    !isGraded
-      ? item
-          .filter((elem) => elem.blank)
-          .map((_, j) => (event) => {
-            let newInputValue = [...inputValue];
-            newInputValue[i][j] = event.target.value;
-            setInputValue(newInputValue);
-          })
-      : () => {}
-  );
-
-  const handleGrade = (event) => {
-    const newIsCorrect = data.map((item, i) =>
-      item
-        .filter((elem) => elem.blank)
-        .map((elem, j) => {
-          if (inputValue[i][j] === elem.original) return true;
-          else return false;
-        })
-    );
-    setIsCorrect(newIsCorrect);
-    setIsGraded(true);
-  };
-
-  const handleClear = (event) => {
-    setInputValue(
+  if (inputValue === undefined) {
+    [inputValue, setInputValue] = React.useState(
       data.map((item) => item.filter((elem) => elem.blank).map((elem) => ""))
     );
-    setIsCorrect(
+  }
+
+  if (isGraded === undefined) {
+    gradedWasUndefined = true;
+    [isGraded, setIsGraded] = React.useState(false);
+    handleGrade = (event) => {
+      const newIsCorrect = data.map((item, i) =>
+        item
+          .filter((elem) => elem.blank)
+          .map((elem, j) => {
+            if (inputValue[i][j] === elem.original) return true;
+            else return false;
+          })
+      );
+      setIsCorrect(newIsCorrect);
+      setIsGraded(true);
+    };
+
+    handleClear = (event) => {
+      setInputValue(
+        data.map((item) => item.filter((elem) => elem.blank).map((elem) => ""))
+      );
+      setIsCorrect(
+        data.map((item) =>
+          item.filter((elem) => elem.blank).map((elem) => false)
+        )
+      );
+      setIsGraded(false);
+    };
+  }
+
+  if (isCorrect === undefined) {
+    [isCorrect, setIsCorrect] = React.useState(
       data.map((item) => item.filter((elem) => elem.blank).map((elem) => false))
     );
-    setIsGraded(false);
-  };
+  }
+
+  if (handleInputChange === undefined) {
+    handleInputChange = data.map((item, i) =>
+      !isGraded
+        ? item
+            .filter((elem) => elem.blank)
+            .map((_, j) => (event) => {
+              let newInputValue = [...inputValue];
+              newInputValue[i][j] = event.target.value;
+              setInputValue(newInputValue);
+            })
+        : () => {}
+    );
+  }
 
   const fillBlankItems = data.map((item, index) => (
     <FillBlankItem
@@ -167,14 +194,18 @@ const FillBlank = ({ data }) => {
   return (
     <div>
       <div className="fill-blank">{fillBlankItems}</div>
-      {isGraded ? (
-        <button className="btn btn-actual-page" onClick={handleClear}>
-          Reintentar
-        </button>
+      {gradedWasUndefined ? (
+        isGraded ? (
+          <button className="btn btn-actual-page" onClick={handleClear}>
+            Reintentar
+          </button>
+        ) : (
+          <button className="btn btn-actual-page" onClick={handleGrade}>
+            Revisar
+          </button>
+        )
       ) : (
-        <button className="btn btn-actual-page" onClick={handleGrade}>
-          Revisar
-        </button>
+        <></>
       )}
     </div>
   );
