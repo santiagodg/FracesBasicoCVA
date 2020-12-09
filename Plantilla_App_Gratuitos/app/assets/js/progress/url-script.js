@@ -262,6 +262,7 @@ function getFiles() {
       3: "modulo8-3.html",
       4: "modulo8-4.html",
       5: "modulo8-5.html",
+      6: "examen-final.html"
     },
   };
 

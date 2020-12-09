@@ -23,6 +23,10 @@ module.exports = {
     "modulo5-2": "./react-src/pages/modulo5-2.js",
     "modulo6-2": "./react-src/pages/modulo6-2.js",
     "modulo6-3": "./react-src/pages/modulo6-3.js",
+    "modulo7-2": "./react-src/pages/modulo7-2.js",
+    "modulo7-3": "./react-src/pages/modulo7-3.js",
+    "modulo8-1": "./react-src/pages/modulo8-1.js",
+    "modulo8-2": "./react-src/pages/modulo8-2.js",
   },
   devtool: "inline-source-map",
   devServer: {

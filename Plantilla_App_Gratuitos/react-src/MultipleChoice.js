@@ -92,6 +92,22 @@ const MultipleChoiceQuestion = ({
   );
 };
 
+// const data = [
+//   {
+//     question: {
+//       original: "Quelle activité Daniela practique-t-elle le mercredi après-midi?",
+//       translation: "¿Qué actividad realiza Daniela los miércoles por la tarde?",
+//     },
+//     options: [
+//       {
+//         original: "Le tennis",
+//         translation: "Tenis",
+//       },
+//     ],
+//     correct: "Le tennis",
+//   },
+// ];
+
 const MultipleChoice = ({ data, graded, checked, onChange }) => {
   let setGraded,
     setChecked,

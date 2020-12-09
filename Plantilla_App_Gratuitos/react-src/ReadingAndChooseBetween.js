@@ -100,6 +100,36 @@ const ChooseBetween = ({ data, selectedStates, isCorrectStates, graded }) => {
   return <div className="choose-between px-md-5" style={{color: "black"}}>{chooseBetweenItems}</div>;
 };
 
+// const readingData = [
+//   [
+//     {
+//       original: "Le lundi, Daniela reste toute la journée à l’université.",
+//       translation: "El lunes, Daniela se queda en la universidad todo el día.",
+//     },
+//   ],
+// ];
+
+// const chooseBetweenData = [
+//   {
+//     textParts: [
+//       "Camille? Elle est dans",
+//       "chambre.",
+//     ],
+//     options: [
+//       [
+//         {
+//           answer: "sa",
+//           correct: true,
+//         },
+//         {
+//           answer: "son",
+//           correct: false,
+//         },
+//       ],
+//     ],
+//   },
+// ]
+
 const ReadingAndChooseBetween = ({ readingData, chooseBetweenData }) => {
   const [graded, setGraded] = React.useState(false);
 
