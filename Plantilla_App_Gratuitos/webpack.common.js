@@ -1,7 +1,7 @@
 const path = require("path");
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  mode: "development",
   entry: {
     "modulo1-1": "./react-src/pages/modulo1-1.js",
     "modulo1-2": "./react-src/pages/modulo1-2.js",
@@ -27,10 +27,6 @@ module.exports = {
     "modulo7-3": "./react-src/pages/modulo7-3.js",
     "modulo8-1": "./react-src/pages/modulo8-1.js",
     "modulo8-2": "./react-src/pages/modulo8-2.js",
-  },
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: "./app/",
   },
   output: {
     filename: "[name].bundle.js",

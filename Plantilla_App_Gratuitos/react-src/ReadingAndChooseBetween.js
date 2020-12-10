@@ -1,5 +1,6 @@
 import React from "react";
-import { ToggleButtonGroup, ToggleButton } from "@material-ui/lab";
+import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import ToggleButton from '@material-ui/lab/ToggleButton';
 
 import Reading from "./Reading";
 import "./ChooseBetween.css";
