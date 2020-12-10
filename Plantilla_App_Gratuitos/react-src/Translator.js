@@ -28,38 +28,48 @@ const TranslatorRow = ({
 
   return (
     <>
-      <hr className="m-0" />
-      <div className="row no-gutters mrg-vertical-10">
+      <hr className="m-0" style={{borderTopWidth: "2px", borderTopColor: ""}} />
+      <div className="row no-gutters my-1">
         <div className="col-md-6 no-pdd">
-          <div className="d-flex h-100">
-            <button
-              className="mr-auto btn btn-secondary mb-0"
-              onClick={handlePlayAudio}
-            >
-              <i className="fas fa-volume-up" />
-            </button>
-            <p className="mr-auto my-auto text-center">{phrase}</p>
+          <div className="row">
+            <div className="col-auto">
+              <button
+                className="btn btn-secondary my-auto"
+                onClick={handlePlayAudio}
+              >
+                <i className="fas fa-volume-up" />
+              </button>
+            </div>
+            <div className="col mx-auto my-auto text-center" style={{maxWidth: "100%", width: "auto"}}>
+              <span className="font-size-16">{phrase}</span>
+            </div>
           </div>
         </div>
         <div className="col-md-6 no-pdd">
-          <div className="d-flex h-100">
+          <div className="row">
             {isTranslated ? (
               <>
-                <p className="ml-auto my-auto text-center">{translation}</p>
-                <button
-                  className="ml-auto btn btn-secondary mb-0"
-                  onClick={handleSwitchTranslation}
-                >
-                  <i className="fas fa-eye-slash" />
-                </button>
+                <div className="col mx-auto my-auto text-center" style={{maxWidth: "100%", width: "auto"}}>
+                  <span className="font-size-16">{translation}</span>
+                </div>
+                <div className="col-auto ml-auto">
+                  <button
+                    className="btn btn-secondary mb-0"
+                    onClick={handleSwitchTranslation}
+                  >
+                    <i className="fas fa-eye-slash" />
+                  </button>
+                </div>
               </>
             ) : (
-              <button
-                className="mx-auto btn btn-secondary mb-0"
-                onClick={handleSwitchTranslation}
-              >
-                <i className="fas fa-eye" />
-              </button>
+              <div className="col-auto mx-auto">
+                <button
+                  className="btn btn-secondary mb-0"
+                  onClick={handleSwitchTranslation}
+                >
+                  <i className="fas fa-eye" />
+                </button>
+              </div>
             )}
           </div>
         </div>
@@ -113,7 +123,7 @@ const Translator = ({ data }) => {
   ));
 
   return (
-    <div className="margin-20 mrg-horizon-150 padding-20">
+    <div style={{ color: "#000" }}>
       <div className="d-flex justify-content-end">
         <button
           className="btn btn-actual-page mrg-horizon-10"
@@ -129,6 +139,7 @@ const Translator = ({ data }) => {
         </button>
       </div>
       {translationRows}
+      <hr className="m-0" style={{borderTopWidth: "2px", borderTopColor: ""}} />
     </div>
   );
 };

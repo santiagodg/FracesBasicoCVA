@@ -58,7 +58,7 @@ const ReadingAndFillBlank = ({ readingData, fillBlankData }) => {
   return (
     <>
       <Reading data={readingData} graded={isGraded} />
-      <div className="px-md-5">
+      <>
         <FillBlank
           data={fillBlankData}
           inputValue={inputValue}
@@ -75,7 +75,7 @@ const ReadingAndFillBlank = ({ readingData, fillBlankData }) => {
             Reintentar
           </button>
         )}
-      </div>
+      </>
     </>
   );
 };

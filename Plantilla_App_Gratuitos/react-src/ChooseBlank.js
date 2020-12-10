@@ -20,17 +20,17 @@ const ChooseBlankItem = ({
     }
   };
 
-  const gradeIndicator = graded ? (
-    isCorrect ? (
-      <span style={{ color: "#59cc33", fontSize: "30px" }}>
-        <i className="fas fa-check"></i>&nbsp;
-      </span>
-    ) : (
-      <span style={{ color: "red", fontSize: "30px" }}>
-        <i className="fas fa-times"></i>&nbsp;
-      </span>
-    )
-  ) : null;
+  // const gradeIndicator = graded ? (
+  //   isCorrect ? (
+  //     <span style={{ color: "#59cc33", fontSize: "30px" }}>
+  //       <i className="fas fa-check"></i>&nbsp;
+  //     </span>
+  //   ) : (
+  //     <span style={{ color: "red", fontSize: "30px" }}>
+  //       <i className="fas fa-times"></i>&nbsp;
+  //     </span>
+  //   )
+  // ) : null;
 
   const toggleButtons = options.map((opt, index) => {
     const classes = {};
@@ -49,23 +49,25 @@ const ChooseBlankItem = ({
   });
 
   return (
-    <div className="p-2">
-      <div className="d-flex justify-content-end align-items-end">
-        <div style={{ flexGrow: 1 }}>
-          <p className="mb-0">
-            {/* {gradeIndicator} */}
-            <span>{firstPart}</span>
-            <span>
-              &nbsp;
-              <u>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </u>
-              &nbsp;
-            </span>
-            <span>{secondPart}</span>
-          </p>
+    <div className="my-1">
+      <div className="row">
+        <div className="col align-self-center">
+          
+            <p className="mb-0 font-size-16">
+              {/* {gradeIndicator} */}
+              <span>{firstPart}</span>
+              <span>
+                &nbsp;
+                <u>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </u>
+                &nbsp;
+              </span>
+              <span>{secondPart}</span>
+            </p>
+          
         </div>
-        <div>
+        <div className="col-auto align-self-end align-self-center">
           <ToggleButtonGroup
             exclusive
             value={selected}
@@ -83,6 +85,7 @@ const ChooseBlankItem = ({
           </p>
         </div>
       )}
+      <hr className="my-1" />
     </div>
   );
 };

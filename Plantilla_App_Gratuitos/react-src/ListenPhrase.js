@@ -14,14 +14,14 @@ const ListenItem = ({ sentences, audio, listNumber }) => {
   ));
 
   return (
-    <div className="d-flex align-items-stretch my-2">
+    <div className="d-flex align-items-stretch my-3">
       <div>
         <button className="p-2 btn btn-secondary m-0" style={{width: "50px", height: "50px"}}>
           <i className="fas fa-volume-up" />
         </button>
       </div>
-      <div className="p-2 pl-3 flex-grow-1">
-        <p>
+      <div className="pl-3 flex-grow-1">
+        <p className="font-size-16 lh-1-5 mb-0">
           {listNumber}.&nbsp;{phrases}
         </p>
       </div>

@@ -30,7 +30,7 @@ const FillBlankItem = ({
             <input
               type="text"
               className={`fill-blank-black-text form-control d-inline-block ${className}`}
-              style={{ width: "300px" }}
+              style={{ maxWidth: "250px" }}
               value={inputValue[inputsCreated]}
               onChange={handleInputChange[inputsCreated]}
             ></input>
@@ -49,7 +49,7 @@ const FillBlankItem = ({
               <input
                 type="text"
                 className={`fill-blank-black-text form-control d-inline-block ${className}`}
-                style={{ width: "300px" }}
+                style={{ maxWidth: "250px" }}
                 value={inputValue[inputsCreated]}
                 onChange={handleInputChange[inputsCreated]}
               ></input>
@@ -81,9 +81,12 @@ const FillBlankItem = ({
   });
 
   return (
-    <div className="fill-blank-item font-size-18 form-group mb-2">
-      {exercise}
-    </div>
+    <>
+      <div className="fill-blank-item font-size-16 form-group my-1">
+        {exercise}
+      </div>
+      <hr className="my-3 my-sm-1" />
+    </>
   );
 };
 

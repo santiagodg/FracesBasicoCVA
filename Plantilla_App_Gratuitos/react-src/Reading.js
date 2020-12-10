@@ -13,10 +13,10 @@ import "./custom-tooltip.css";
 
 const Reading = ({ data, graded }) => {
   return (
-    <div className="reading px-md-5 mb-3">
+    <div className="reading">
       {data.map((paragraph, i) => {
         return (
-          <p key={i} className="text-justify mb-0">
+          <p key={i}>
             {paragraph.map((sentence, j) => {
               if (!graded) {
                 return (

@@ -1,13 +1,13 @@
 /assets/images/course/intro/portada.jpg             - Shutterstock ID 1397037440    listo
-/assets/images/course/intro/objetivos.jpg           - Shutterstock ID 1048826999    falta comprimir
+/assets/images/course/intro/objetivos.jpg           - Shutterstock ID 1048826999    listo
 /assets/images/course/intro/metodologia.jpg         - Shutterstock ID 782270425     listo
-/assets/images/course/congratulations.jpg           - Shutterstock ID 629144165     listo
+/assets/images/course/congratulations.jpg           - Shutterstock ID 521540146     no tengo
 /assets/images/course/temario/modulo1.jpg           - Shutterstock ID 454026802     listo
-/assets/images/course/temario/modulo2.jpg           - Shutterstock ID 370390046     falta comprimir
+/assets/images/course/temario/modulo2.jpg           - Shutterstock ID 370390046     listo
 /assets/images/course/temario/modulo3.jpg           - Shutterstock ID 1254279517    listo
 /assets/images/course/temario/modulo4.jpg           - Shutterstock ID 766847608     listo
 /assets/images/course/temario/modulo5.jpg           - Shutterstock ID 1378191401    listo
-/assets/images/course/temario/modulo6.jpg           - Shutterstock ID 749310046     falta comprimir
+/assets/images/course/temario/modulo6.jpg           - Shutterstock ID 749310046     listo
 /assets/images/course/temario/modulo7.jpg           - Shutterstock ID 1393758206    listo
 /assets/images/course/temario/modulo8.jpg           - Shutterstock ID 524728789     listo
 /assets/images/course/modulo1/portada.jpg           - Shutterstock ID 1150484738    listo
@@ -16,3 +16,9 @@
 /assets/images/course/modulo3/portada.jpg           - Shutterstock ID 752113054     listo
 /assets/images/course/modulo4/portada.jpg           - Shutterstock ID 515462563     listo
 /assets/images/course/modulo5/portada.jpg           - Shutterstock ID 548213818     no tengo
+/assets/images/course/modulo6/portada.jpg           - Shutterstock ID 384205462     no tengo
+/assets/images/course/modulo7/portada.jpg           - Shutterstock ID 558136654     no tengo
+/assets/images/course/modulo8/portada.jpg           - Shutterstock ID 1071620870    no tengo
+/assets/images/course/politicas/politicas.jpg       - Shutterstock ID 149673833     no tengo
+/assets/images/course/contacto/contacto.jpg         - Shutterstock ID 1665048412    no tengo
+/assets/images/course/creditos/creditos.jpg         - Shutterstock ID 1297524739    no tengo

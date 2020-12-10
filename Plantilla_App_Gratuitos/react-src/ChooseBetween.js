@@ -56,7 +56,7 @@ const ChooseBetweenItem = ({
       );
     }
     let res = [];
-    res.push(<span key={textParts[0]} className="font-size-18">{textParts[0]}</span>);
+    res.push(<span key={textParts[0]} className="font-size-16">{textParts[0]}</span>);
     for (let i = 1; i < textParts.length; i++) {
       const [selected, _] = selectedState[i - 1];
       res.push(
@@ -71,14 +71,17 @@ const ChooseBetweenItem = ({
         </ToggleButtonGroup>
       );
       res.push(
-        <span key={textParts[i]} className="font-size-18">{textParts[i]}</span>
+        <span key={textParts[i]} className="font-size-16">{textParts[i]}</span>
+      );
+      res.push(
+        <hr className="my-1" />
       );
     }
     return res;
   };
 
   return (
-    <div className="choose-between-item p-2">
+    <div className="choose-between-item my-1">
       {exercise()}
     </div>
   );

@@ -13,7 +13,7 @@ const MultipleChoiceQuestion = ({
   graded,
 }) => {
   return (
-    <div className="mb-3">
+    <div className="col-md-6 my-2">
       <p className="mb-0">
         {!graded ? (
           <span dangerouslySetInnerHTML={{ __html: question.original }} />
@@ -45,7 +45,6 @@ const MultipleChoiceQuestion = ({
                 onChange={onChange}
                 className="form-check-input"
               />
-              &nbsp;&nbsp;
               <label className="form-check-label multiple-choice-label">
                 {opt.original}
               </label>
@@ -61,7 +60,6 @@ const MultipleChoiceQuestion = ({
                 onChange={() => {}}
                 className="form-check-input"
               />
-              &nbsp;&nbsp;
               <Tooltip
                 title={opt.translation}
                 placement="top"
@@ -141,17 +139,19 @@ const MultipleChoice = ({ data, graded, checked, onChange }) => {
 
   return (
     <>
-      {data.map((q, index) => (
-        <MultipleChoiceQuestion
-          key={index}
-          question={q.question}
-          options={q.options}
-          correctValue={q.correct}
-          checked={checked[index]}
-          onChange={onChange[index]}
-          graded={graded}
-        />
-      ))}
+      <div className="row">
+        {data.map((q, index) => (
+          <MultipleChoiceQuestion
+            key={index}
+            question={q.question}
+            options={q.options}
+            correctValue={q.correct}
+            checked={checked[index]}
+            onChange={onChange[index]}
+            graded={graded}
+          />
+        ))}
+      </div>
       {gradedWasUndefined ? (
         graded ? (
           <button class="btn btn-actual-page" onClick={handleClear}>

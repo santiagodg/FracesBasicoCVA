@@ -56,7 +56,7 @@ const ChooseBetweenItem = ({
     }
     let res = [];
     res.push(
-      <span key={textParts[0]} className="font-size-18">
+      <span key={textParts[0]} className="font-size-16">
         {textParts[0]}
       </span>
     );
@@ -74,7 +74,7 @@ const ChooseBetweenItem = ({
         </ToggleButtonGroup>
       );
       res.push(
-        <span key={textParts[i]} className="font-size-18">
+        <span key={textParts[i]} className="font-size-16">
           {textParts[i]}
         </span>
       );
@@ -82,7 +82,7 @@ const ChooseBetweenItem = ({
     return res;
   };
 
-  return <div className="choose-between-item p-2">{exercise()}</div>;
+  return <div className="choose-between-item my-1">{exercise()}</div>;
 };
 
 const ChooseBetween = ({ data, selectedStates, isCorrectStates, graded }) => {
@@ -97,7 +97,7 @@ const ChooseBetween = ({ data, selectedStates, isCorrectStates, graded }) => {
     />
   ));
 
-  return <div className="choose-between px-md-5" style={{color: "black"}}>{chooseBetweenItems}</div>;
+  return <div className="choose-between" style={{color: "black"}}>{chooseBetweenItems}</div>;
 };
 
 // const readingData = [

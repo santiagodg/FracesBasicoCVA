@@ -52,7 +52,7 @@ const Dialog = (props) => {
   );
 
   return (
-    <div className="margin-20 bg-white padding-20">
+    <div className="bg-white">
       <div className="d-flex">
         {playPauseButton}
         <audio ref={audioRef} src={audio} onEnded={handleEndedAudio} />
